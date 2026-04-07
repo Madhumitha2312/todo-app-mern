@@ -8,7 +8,7 @@ function App() {
   // Fetch tasks
   const fetchTasks = async () => {
     setLoading(true);
-    const res = await fetch("https://todo-app-mern-otg1.onrender.com");
+    const res = await fetch("https://todo-app-mern-otg1.onrender.com/tasks");
     const data = await res.json();
     setTasks(data);
     setLoading(false);
