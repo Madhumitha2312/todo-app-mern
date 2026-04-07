@@ -104,6 +104,11 @@ npm start
 
 ---
 
+## 🚀 Live Demo
+
+Frontend: https://todo-app-mern3-qsz98hdl7-madhumithaprakash23-3241s-projects.vercel.app  
+Backend: https://todo-app-mern-otg1.onrender.com/tasks
+
 ## 🎯 Future Improvements
 
 * 🔍 Search tasks
