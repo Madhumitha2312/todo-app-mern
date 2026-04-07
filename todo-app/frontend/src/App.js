@@ -8,7 +8,7 @@ function App() {
   // Fetch tasks
   const fetchTasks = async () => {
     setLoading(true);
-    const res = await fetch("http://localhost:5000/tasks");
+    const res = await fetch("https://todo-app-mern-otg1.onrender.com");
     const data = await res.json();
     setTasks(data);
     setLoading(false);
@@ -22,7 +22,7 @@ function App() {
   const addTask = async () => {
     if (!title) return;
 
-    await fetch("http://localhost:5000/tasks", {
+    await fetch("https://todo-app-mern-otg1.onrender.com/tasks", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -36,7 +36,7 @@ function App() {
 
   // Delete task
   const deleteTask = async (id) => {
-    await fetch(`http://localhost:5000/tasks/${id}`, {
+    await fetch(`https://todo-app-mern-otg1.onrender.com/tasks/${id}`, {
       method: "DELETE",
     });
     fetchTasks();
@@ -44,7 +44,7 @@ function App() {
 
   // Mark complete
   const updateTask = async (id) => {
-    await fetch(`http://localhost:5000/tasks/${id}`, {
+    await fetch(`https://todo-app-mern-otg1.onrender.com/tasks/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -59,7 +59,7 @@ function App() {
     const newTitle = prompt("Enter new task:");
     if (!newTitle) return;
 
-    await fetch(`http://localhost:5000/tasks/${id}`, {
+    await fetch(`https://todo-app-mern-otg1.onrender.com/tasks/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
